@@ -1,0 +1,521 @@
+/* // Made by Åsa Berglund 2021 */
+
+/*Fonts*/
+/*font-family: 'Barrio', cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
+/* font-family: 'Raleway', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #359184;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  z-index: 2;
+}
+.errorMessage {
+  color: rgb(170, 40, 40);
+}
+
+/*Styling for start page*/
+.start-header {
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  left: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-image: url("./img/start-background.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.start-header-title {
+  font-size: 8rem;
+  margin-top: 40%;
+}
+.start-header-text {
+  margin-top: 35%;
+  width: 65%;
+  margin: auto;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: #325f5183;
+}
+label .login {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.start {
+  width: 50%;
+  margin-left: 50%;
+}
+.login-start {
+  text-align: center;
+  font-size: 0.9em;
+}
+.form-login label {
+  display: flex;
+  align-items: baseline;
+}
+.form-login {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: baseline;
+  padding-top: 10px;
+  width: 90%;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 0.7em;
+}
+
+#start.submit {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.start-posts {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  margin-top: 100px;
+}
+.start-posts h1 {
+  font-size: 2.5em;
+  color: #26473f;
+}
+.start-posts h1 a {
+  text-decoration: none;
+}
+.start-posts h1 a:hover {
+  color: #4d9b90;
+}
+
+/* Navigationsbar/sidebar responsive */
+.navigation {
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  background-color: #359184;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 3;
+  margin-top: 80px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+.navigation:hover,
+.navigation.active {
+  width: 300px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(241, 248, 246);
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  padding-top: 20px;
+}
+.navigation ul li:hover {
+  background-color: rgb(159, 202, 207);
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  height: 60px;
+}
+
+.navigation ul li a .icon {
+  position: absolute;
+  display: block;
+  width: 30px;
+  margin-left: 10px;
+  height: 30px;
+  text-align: center;
+}
+
+#global {
+  content: "\f57d";
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding-left: 70px;
+  text-align: start;
+  white-space: nowrap;
+}
+/* Länkar till alla inlägg */
+.all-post-list {
+  position: absolute;
+  display: block;
+  height: 350px;
+  width: 100%;
+  margin-top: 200px;
+  overflow: scroll;
+  padding-top: 20px;
+  padding-right: 10px;
+  background-color: rgb(11, 118, 122);
+}
+.post-list {
+  text-decoration: underline;
+  margin-left: 70px;
+}
+.post-list a:hover {
+  color: #359184;
+}
+.post-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.toggle {
+  position: fixed;
+  top: 7px;
+  left: 2px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle:before {
+  content: "\f0c9";
+  font-family: fontAwesome;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.toggle:active:before {
+  content: "\f00d";
+  font-family: fontAwesome;
+}
+/* Main */
+.centered {
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  margin: auto;
+}
+.test,
+.index,
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling form */
+.input-title {
+  width: 100%;
+}
+
+.all-posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  width: 100%;
+  padding-bottom: 100px;
+}
+.admin-select-option {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(189, 218, 210);
+  margin-bottom: 3%;
+}
+label:focus,
+input:focus {
+  border-bottom: 2px solid rgb(45, 165, 135);
+}
+input {
+  width: 100%;
+  height: 50px;
+  border-top-style: none;
+  border-right: none;
+  border-left: none;
+}
+label {
+  font-size: 1.2em;
+}
+textarea {
+  width: 500px;
+}
+a {
+  color: rgb(39, 95, 83);
+  font-weight: bold;
+}
+
+.submit {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+  color: rgb(54, 68, 65);
+  background-color: #a6d1c6;
+  border-radius: 7px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 2%;
+}
+.posts {
+  padding: 2%;
+  border: 2px solid rgb(117, 187, 175);
+  border-radius: 5px;
+  margin-top: 50px;
+  min-height: 300px;
+}
+.post-pic img {
+  width: 100%;
+}
+.all-post-pic {
+  height: 200px;
+  float: left;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+.content {
+  margin-left: 2%;
+}
+
+/*Styling select tags*/
+.select-tags {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  right: 0;
+  top: 100px;
+  padding: 2%;
+}
+
+.select-option {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #b5e7db;
+  border-style: none;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.select-submit {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #265e50;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.select-form {
+  margin-top: 15%;
+}
+
+
+/* footer */
+footer {
+  background-color: #5866a5;
+  height: 50px;
+  width: 100%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  /* Index page */
+  /*Styling for start page*/
+  .start-header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-size: 50%;
+  }
+  .start-header-title {
+    font-size: 5rem;
+    margin-top: 13%;
+  }
+  .start-header-text {
+    margin-top: 0%;
+    width: 40%;
+    font-size: 0.7em;
+  }
+  .start {
+    width: 90%;
+    margin: auto;
+  }
+
+  #start.submit {
+    width: 200px;
+    margin-left: 10px;
+    height: 40px;
+  }
+
+  .all-post-pic {
+    height: 150px;
+  }
+  main {
+    width: 50%;
+    margin-left: 130px;
+  }
+  /*Styling select tags*/
+  .select-tags {
+    width: 200px;
+  }
+}
+
+@media (max-width: 750px) {
+  /* start page */
+  .start-header {
+    background-size: 80%;
+    height: 60vh;
+  }
+  .start-header-title {
+    font-size: 4.5rem;
+    margin-top: 20%;
+  }
+  .start-header-text {
+    width: 50%;
+    font-size: 0.6em;
+  }
+  .start {
+    width: 100%;
+  }
+
+  /* main */
+  main {
+    width: 90%;
+    margin: auto;
+  }
+  .navigation {
+    left: -60px;
+  }
+  .centered {
+    width: 90%;
+  }
+
+  .navigation.active {
+    left: 0px;
+    width: 100%;
+  }
+  .all-post-list {
+    background-color: #359184;
+  }
+
+  /*Styling select tags*/
+  .select-tags {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    top: 100px;
+    margin: 0%;
+  }
+  .select-submit {
+    margin-top: 10px;
+  }
+  .select-form {
+    font-size: 0.8em;
+    margin: 2%;
+    width: 50%;
+  }
+  .no-mobile {
+    display: none;
+  }
+
+  .select-option {
+    height: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .select-tags {
+    flex-direction: column;
+    height: 300px;
+  }
+  .select-form {
+    width: 100%;
+  }
+  .header-title {
+    font-size: 1.2em;
+  }
+  .form-login {
+    flex-direction: column;
+
+    font-size: 0.8em;
+  }
+  /* start page */
+  .start-header {
+    background-size: 90%;
+    height: 65vh;
+
+  }
+  .start-header-text {
+    width: 70%;
+    margin-top: auto;
+    font-size: 0.6em;
+  }
+  .start {
+    width: 100%;
+  }
+  main{
+    width:100%;
+  }
+}
